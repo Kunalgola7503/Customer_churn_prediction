@@ -169,40 +169,6 @@ powerbi_dashboard/churn_dashboard.pbix
 pip install pandas numpy scikit-learn seaborn matplotlib joblib
 ```
 
-### 🧾 Run Jupyter Notebooks
 
-- `01_Churn_EDA.ipynb`  
-- `02_Churn_Modeling.ipynb`
-
-### 🔮 Load Saved Model
-
-```
-model = joblib.load("churn_model.pkl")
-```
-
----
-
-# 🎓 **Internship Submission Steps**
-
-1. Upload project to **GitHub**  
-2. Share GitHub link on **LinkedIn**  
-3. Email your Offer Letter + repo link to:  
-📧 **vaishali@codectechnologies.in**
-
----
-
-# 🏁 **Conclusion**
-
-This project demonstrates:
-
-- End‑to‑end ML pipeline  
-- Strong EDA & business understanding  
-- Gradient Boosting model with high performance  
-- Clean, structured code  
-- A professional Power BI dashboard  
-
-💼 Perfect for portfolio, resume, LinkedIn, and internship evaluation.
-
----
 
 <p align="center"><b>🔥 Completed with Machine Learning + Analytics + BI Excellence</b></p>
