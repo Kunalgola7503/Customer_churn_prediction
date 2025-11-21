@@ -1,189 +1,208 @@
-📊 Customer Churn Prediction (Telecom Dataset)
-👤 Author: Kunal Gola
-🏢 Organization: Codec Technologies (Internship Project)
-📁 Project Type: End-to-End Machine Learning + EDA + ML Modeling + Power BI Dashboard
-⭐ Project Overview
+# 📊 **Customer Churn Prediction – Telecom Industry**
 
-Customer churn refers to customers stopping the use of a company’s service.
-Telecom companies face major losses due to churn, so predicting which customers are likely to leave helps improve retention and revenue.
+### 👨‍💻 **Author:** *Kunal Gola*  
+### 🏢 **Organization:** *Codec Technologies – Internship Project*  
+### 🔥 **Project Type:** *End-to-End Machine Learning + EDA + Power BI Dashboard*
 
-This project builds a machine learning model that predicts whether a customer will Churn (Yes/No) and also includes a Power BI dashboard to visualize churn patterns and business insights.
+---
 
-🎯 Key Objectives
+# ⭐ **Project Overview**
 
-✔ Perform detailed Exploratory Data Analysis (EDA)
-✔ Clean and preprocess telecom churn dataset
-✔ Encode categorical features
-✔ Train multiple ML models
-✔ Select the best model (Gradient Boosting)
-✔ Save final model as .pkl
-✔ Build a Power BI dashboard using churn data
-✔ Prepare a complete project for GitHub & Internship submission
+Customer churn refers to when customers discontinue a service.  
+Telecom companies suffer significant revenue loss when customers leave unexpectedly.
 
-📂 Project Structure
+This project builds a **machine learning model** that predicts whether a customer will churn (**Yes/No**), supported by a powerful **Power BI dashboard** to help business teams identify churn patterns and take data-driven decisions.
+
+---
+
+# 🎯 **Project Goals**
+
+- ✔ Perform deep **Exploratory Data Analysis (EDA)**  
+- ✔ Clean & preprocess telecom churn dataset  
+- ✔ Encode categorical variables  
+- ✔ Build multiple ML models  
+- ✔ Select **Gradient Boosting** as best model  
+- ✔ Save model as `.pkl` for deployment  
+- ✔ Build an interactive **Power BI dashboard**  
+- ✔ Publish project for GitHub + LinkedIn + internship submission  
+
+---
+
+# 📁 **Project Structure**
+
+```
 customer-churn-prediction/
 │── data/
-│    ├── customer_churn_telecom_services.xlsx
-│    ├── cleaned_churn.csv
+│   ├── customer_churn_telecom_services.xlsx
+│   ├── cleaned_churn.csv
 │
 │── notebooks/
-│    ├── 01_Churn_EDA.ipynb
-│    ├── 02_Churn_Modeling.ipynb
+│   ├── 01_Churn_EDA.ipynb
+│   ├── 02_Churn_Modeling.ipynb
 │
 │── models/
-│    ├── churn_model.pkl
+│   ├── churn_model.pkl
 │
 │── powerbi_dashboard/
-│    ├── churn_dashboard.pbix (Power BI file)
+│   ├── churn_dashboard.pbix
 │
 │── README.md
+```
 
-🧠 Dataset Information
+---
 
-Dataset includes:
+# 📚 **Dataset Details**
 
-Demographics (gender, partner, dependents)
+This dataset includes:
 
-Services (internet, device protection, phone, etc.)
+- 👥 Customer demographics  
+- 📡 Telecom services usage  
+- ⏳ Tenure  
+- 💳 Billing & payment information  
+- 💰 Monthly & total charges  
+- ❗ Churn label (Yes/No)
 
-Contract info (month-to-month, one year, two year)
+---
 
-Payment method
+# 🧹 **Data Cleaning & Preprocessing**
 
-Monthly & total charges
+Performed:
 
-Churn flag (Yes/No)
+- ➤ Converted `TotalCharges` → numeric  
+- ➤ Removed `customerID`  
+- ➤ Filled missing values  
+- ➤ Encoded categorical columns  
+- ➤ Scaled numerical features  
+- ➤ Splitted data into train/test  
 
-🧹 Data Cleaning & Preprocessing
+---
 
-✔ Converted TotalCharges to numeric
-✔ Filled missing values
-✔ Removed unnecessary columns (customerID)
-✔ Encoded categorical variables using LabelEncoder
-✔ Standardized numeric columns
-✔ Split into train/test datasets
+# 📊 **Exploratory Data Analysis (EDA) Highlights**
 
-📊 Exploratory Data Analysis (EDA)
+Some key findings:
 
-EDA included:
+- 🔸 Month‑to‑month contract customers churn the most  
+- 🔸 Customers using **Electronic Check** churn heavily  
+- 🔸 Lower tenure = higher churn  
+- 🔸 Fiber optic users churn more  
+- 🔸 High monthly charges increase churn likelihood  
 
-Churn distribution
+Multiple visualizations were created using **Matplotlib + Seaborn**.
 
-Tenure distribution
+---
 
-Monthly charges distribution
+# 🤖 **Machine Learning Models Used**
 
-Churn by gender
+| Model | Result |
+|-------|--------|
+| Logistic Regression | Good baseline |
+| Random Forest | High accuracy |
+| 🌟 Gradient Boosting | **Best model** |
 
-Churn by contract type
+The final model:
 
-Churn by payment method
+```
+GradientBoostingClassifier()
+```
 
-Correlation heatmap
+Saved using:
 
-Internet service vs churn
-
-🤖 Machine Learning Models
-
-Models trained:
-
-Logistic Regression
-
-Random Forest
-
-Gradient Boosting (Final Best Model)
-
-Gradient Boosting performed the best in:
-
-Accuracy
-
-Precision
-
-Recall
-
-ROC-AUC
-
-📦 Saving the Model
+```
 joblib.dump(gb, "churn_model.pkl")
+```
 
+---
 
-Load the model:
+# 📈 **Model Evaluation Metrics**
 
-model = joblib.load("churn_model.pkl")
+- ✔ Accuracy  
+- ✔ Precision  
+- ✔ Recall  
+- ✔ F1‑Score  
+- ✔ ROC‑AUC  
+- ✔ Confusion Matrix  
+- ✔ Feature Importance  
 
-📈 Model Evaluation
+**Top Features Influencing Churn:**
 
-Evaluation metrics:
+- Contract Type  
+- Tenure  
+- Monthly Charges  
+- Payment Method  
+- Internet Service  
 
-Accuracy
+---
 
-Precision
+# 📊 **Power BI Dashboard**
 
-Recall
+An interactive **Power BI Dashboard** is built using `cleaned_churn.csv`.
 
-F1-score
+### Dashboard Includes:
 
-ROC-AUC
+- 🔹 Overall Churn Rate  
+- 🔹 Churn by Gender  
+- 🔹 Churn by Contract Type  
+- 🔹 Churn by Payment Method  
+- 🔹 Churn vs Tenure  
+- 🔹 Monthly Charges Analysis  
+- 🔹 Service‑wise Churn Breakdown  
+- 🔹 Dynamic filters (gender, contract, internet service, payment method)
 
-Confusion Matrix
+### Dashboard Purpose:
 
-Feature Importance
+- Identify high‑risk customer segments  
+- Understand churn causes visually  
+- Support data‑driven retention strategies  
 
-Top Predictors of Churn:
-
-Contract Type
-
-Tenure
-
-Monthly Charges
-
-Internet Service
-
-Payment Method
-
-📊 Power BI Dashboard (Key Component)
-
-A Power BI dashboard is created using cleaned_churn.csv to give business-level insights.
-
-Dashboard Includes:
-
-✔ Overall Churn Rate
-✔ Churn by Gender
-✔ Churn by Contract Type
-✔ Churn by Payment Method
-✔ Churn vs Tenure Analysis
-✔ Monthly Charges: High vs Low churners
-✔ Service adoption impact (internet, device protection, tech support)
-✔ Slicers for Contract, Gender, Payment Method
-
-Dashboard Purpose:
-
-Understand churn drivers visually
-
-Help business teams identify high-risk customer groups
-
-Provide actionable insights for customer retention strategies
-
-The final dashboard file will be added as:
-
+File saved as:
+```
 powerbi_dashboard/churn_dashboard.pbix
+```
 
-🚀 How to Run the Project
-Install dependencies:
+---
+
+# ⚙️ **How to Run This Project**
+
+### 🔧 Install Requirements
+
+```
 pip install pandas numpy scikit-learn seaborn matplotlib joblib
+```
 
-Run Notebooks:
+### 🧾 Run Jupyter Notebooks
 
-01_Churn_EDA.ipynb
+- `01_Churn_EDA.ipynb`  
+- `02_Churn_Modeling.ipynb`
 
-02_Churn_Modeling.ipynb
+### 🔮 Load Saved Model
 
-For Power BI:
+```
+model = joblib.load("churn_model.pkl")
+```
 
-Open Power BI Desktop
+---
 
-Load cleaned_churn.csv
+# 🎓 **Internship Submission Steps**
 
-Build dashboard with charts mentioned above
+1. Upload project to **GitHub**  
+2. Share GitHub link on **LinkedIn**  
+3. Email your Offer Letter + repo link to:  
+📧 **vaishali@codectechnologies.in**
 
-Save as churn_dashboard.pbix
+---
+
+# 🏁 **Conclusion**
+
+This project demonstrates:
+
+- End‑to‑end ML pipeline  
+- Strong EDA & business understanding  
+- Gradient Boosting model with high performance  
+- Clean, structured code  
+- A professional Power BI dashboard  
+
+💼 Perfect for portfolio, resume, LinkedIn, and internship evaluation.
+
+---
+
+<p align="center"><b>🔥 Completed with Machine Learning + Analytics + BI Excellence</b></p>
