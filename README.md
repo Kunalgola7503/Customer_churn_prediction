@@ -154,21 +154,6 @@ An interactive **Power BI Dashboard** is built using `cleaned_churn.csv`.
 - Understand churn causes visually  
 - Support data‑driven retention strategies  
 
-File saved as:
-```
-powerbi_dashboard/churn_dashboard.pbix
-```
-
----
-
-# ⚙️ **How to Run This Project**
-
-### 🔧 Install Requirements
-
-```
-pip install pandas numpy scikit-learn seaborn matplotlib joblib
-```
-
 
 
 <p align="center"><b>🔥 Completed with Machine Learning + Analytics + BI Excellence</b></p>
